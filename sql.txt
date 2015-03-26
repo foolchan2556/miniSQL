@@ -1,0 +1,25 @@
+create database testDB;
+create table shop (id int primary , price float , item char(10) unique,);
+create index id on shop;
+use testDB;
+
+insert shop (10, 5.5, 'meat');
+insert shop (20, 6.5, 'rice');
+insert shop (30, 7.5, 'banana');
+
+select * from shop;
+select id item from shop where id>100;
+select id item from shop where id>100 and price<=900;
+select id item from shop where id>100 or price<=900;
+
+delete from shop where id>100;
+delete from shop where id>100 and price<=900;
+delete from shop where id>100 or price<=900;
+delete from shop
+
+test index id on shop;
+
+execfile record_100.sql;
+drop database testDB;
+drop table shop;
+drop index id on shop;
